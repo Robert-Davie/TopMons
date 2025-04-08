@@ -1,4 +1,6 @@
 import './App.css';
+import ClickableField from './components/ClickableField';
+import CommitButton from './components/CommitButton';
 
 function App() {
   return (
@@ -15,6 +17,7 @@ function App() {
     </div>
     <div className="main-content">
       <div className="playmat">
+        <ClickableField initialText="Click me to change color!" initialColor="pink" size="150px" />
         <div className="deck top-left"></div>
         <div className="deck bottom-right"></div>
           <div className="play-area">
@@ -22,7 +25,9 @@ function App() {
               <div className="card opponent-card">Opponent Hand</div>
             </div>
             <div className="middle-row">
-              <div className="middle card">Player Compare</div>
+              <div className="middle card">
+                <CommitButton initialText="Commit" initialColor="blue" size="200px" />
+              </div>
               <div className="middle card">Opponent Compare</div>
             </div>
             <div className="player-row">
