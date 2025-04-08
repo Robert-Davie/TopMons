@@ -2,7 +2,7 @@
   "name": "topmons-prototype",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://Ryvolution.github.io/topmons-prototype",
+  "homepage": "https://ryvolution.github.io/topmons-prototype/",
   "dependencies": {
     "@testing-library/dom": "^10.4.0",
     "@testing-library/jest-dom": "^6.6.3",
