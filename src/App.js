@@ -17,13 +17,13 @@ function App() {
       <div className="playmat">
         <div className="deck top-left" style={{
           backgroundImage: "url('/images/prototype_topmons_card_design_nb.png')",
-          backgroundSize: "cover",
+          backgroundSize: "contain",
           backgroundPosition: "center",
           backgroundRepeat: "no-repeat",
         }}></div>
         <div className="deck bottom-right" style={{
           backgroundImage: "url('/images/prototype_topmons_kai_card_design_nb.png')",
-          backgroundSize: "cover",
+          backgroundSize: "contain",
           backgroundPosition: "center",
           backgroundRepeat: "no-repeat",
         }}></div>
