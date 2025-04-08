@@ -15,18 +15,8 @@ function App() {
     </div>
     <div className="main-content">
       <div className="playmat">
-        <div className="deck top-left" style={{
-          backgroundImage: "url('/images/prototype_topmons_card_design_nb.png')",
-          backgroundSize: "contain",
-          backgroundPosition: "center",
-          backgroundRepeat: "no-repeat",
-        }}></div>
-        <div className="deck bottom-right" style={{
-          backgroundImage: "url('/images/prototype_topmons_kai_card_design_nb.png')",
-          backgroundSize: "contain",
-          backgroundPosition: "center",
-          backgroundRepeat: "no-repeat",
-        }}></div>
+        <div className="deck top-left"></div>
+        <div className="deck bottom-right"></div>
           <div className="play-area">
             <div className="opponent-row">
               <div className="card opponent-card">Opponent Hand</div>

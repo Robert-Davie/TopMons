@@ -78,16 +78,21 @@
   font-weight: bold;
   position: absolute;
   z-index: 1;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 .top-left {
   top: 10px;
   left: 10px;
+  background-image: url('images/prototype_topmons_card_design_nb.png');
 }
 
 .bottom-right {
   bottom: 10px;
   right: 10px;
+  background-image: url('images/prototype_topmons_kai_card_design_nb.png');
 }
 
 /* Play Area - Center */
