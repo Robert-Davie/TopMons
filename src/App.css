@@ -2,37 +2,167 @@
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* Basic Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+/* Container Setup */
+.container {
+  display: flex;
+  height: 100vh;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* Sidebar Styling */
+.sidebar {
+  width: 20%;
+  background-color: #333;
+  color: white;
+  padding: 20px;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  justify-content: space-between; /* This spreads top and bottom menus */
+  height: 100vh; /* Ensure full height for proper spacing */
+}
+
+
+.menu-item {
+  padding: 15px;
+  text-align: center;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.menu-item:hover {
+  background-color: #444;
+}
+
+.menu-item:first-child {
+  margin-top: 20px;
+}
+
+.menu-item:last-child {
+  margin-bottom: 20px;
+}
+
+/* Main Content Area */
+.main-content {
+  width: 80%;
+  background-color:darkcyan;
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
 }
 
-.App-link {
-  color: #61dafb;
+/* Playmat Setup */
+.playmat {
+  width: 85%;
+  height: 80%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  background-color: darkgrey;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.deck {
+  width: 15%;
+  height: 37%;
+  border-radius: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
+  font-weight: bold;
+  position: absolute;
+  z-index: 1;
 }
+
+.top-left {
+  top: 10px;
+  left: 10px;
+}
+
+.bottom-right {
+  bottom: 10px;
+  right: 10px;
+}
+
+/* Play Area - Center */
+.play-area {
+  width: 50%; /* or use a % if you want it responsive */
+  height: 95%;
+  background-color: #bbb;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 10px;
+  box-sizing: border-box;
+  border-radius: 10px;
+}
+
+.opponent-row,
+.middle-row,
+.player-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+}
+
+.middle-row {
+  gap: 20%;
+  background-color: #aaa;
+}
+
+.card {
+  width: 35%;
+  height: 95%;
+  background-color: #ddd;
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  transition: transform 0.2s;
+  transform-origin: center;
+}
+
+.middle {
+  border-style: dashed;
+}
+
+.card:hover {
+  transform: scale(1.5);
+  background-color: aliceblue;
+  z-index: 2;
+}
+
+/* Responsive Styling */
+@media screen and (max-width: 768px) {
+  .container {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    width: 100%;
+    height: auto;
+    padding: 10px;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
+  .main-content {
+    width: 100%;
+    height: 100%;
+  }
+
+  .deck {
+    width: 80px;
+    height: 120px;
+  }
+
+}
+
