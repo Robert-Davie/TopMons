@@ -35,6 +35,19 @@
   transition: background-color 0.3s;
 }
 
+.menutitle {
+  background-image: url('images/TopMons Text Generated.png');
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 50%;
+}
+
+.menutitle:hover {
+  transform: scale(1.1);
+  background-color: rgba(0, 0, 255, 0.3);
+}
+
 .menu-item:hover {
   background-color: #444;
 }

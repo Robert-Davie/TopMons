@@ -7,6 +7,7 @@ function App() {
     <div className="container">
     <div className="sidebar">
       <div className="menu top-menu">
+        <div className="menutitle menu-item"></div>
         <div className="menu-item">Home</div>
         <div className="menu-item">TopMons</div>
       </div>
