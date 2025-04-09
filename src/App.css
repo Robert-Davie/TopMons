@@ -45,7 +45,6 @@
 
 .menutitle:hover {
   transform: scale(1.1);
-  background-color: rgba(0, 0, 255, 0.3);
 }
 
 .menu-item:hover {
