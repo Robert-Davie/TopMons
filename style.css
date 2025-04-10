@@ -1,0 +1,97 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+#myContainer {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    right: 20px;
+    bottom: 20px;
+    background-color: gray;
+    /* Add any additional styling you need below */
+    overflow: auto; /* ensures content can be scrolled if there's more to show */
+}
+
+#myMat {
+    position: absolute;
+    top: 50px;
+    left: 50px;
+    right: 50px;
+    bottom: 50px;
+    color: white;
+    background-color: blue;
+    /* Add any additional styling you need below */
+    overflow: auto; /* ensures content can be scrolled if there's more to show */
+}
+
+
+  
+ 
+  .card {
+    width: 80px;
+    height: 120px;
+    border: 1px solid #999;
+    border-radius: 5px;
+    text-align: center;
+    line-height: 60px;
+    font-weight: bold;
+    color: #333;
+    background-color: #eee;
+    position: absolute; 
+    
+  }
+
+  .deck {
+    background-color: #fafafa;
+  }
+  .active-card {
+    background-color: #ffe;
+  }
+  
+  /* Position each card on the matttt */
+  
+  /* Top-left Deck */
+  .top-left {
+    top: 20px;
+    left: 20px;
+  }
+  
+   /* Bottom-right Deck */
+   .bottom-right {
+    bottom: 20px;
+    right: 20px;
+  } 
+  
+  /* Top-center Active Card */
+  .top-center {
+    top: 100px;
+    left: 48%;
+   
+  }
+  
+  /* Bottom-center Active Card */
+  .bottom-center {
+    bottom: 60px;
+    left: 48%;
+
+  }
+ 
+
+  
+  
+  /* Logo in the center of the board 
+  .logo {
+    position: absolute;
+    top: 50%; 
+    left: 50%;
+
+  } */
+  
+    /*.logo img {
+    max-width: 200px; 
+    height: auto;
+    display: block;
+  } */
