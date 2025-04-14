@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-function ClickableField({ initialText, initialColor, size }) {
+function DialogBox({ initialText, initialColor, size }) {
   const [clicked, setClicked] = useState(false);
 
   const handleClick = () => {
@@ -14,8 +14,7 @@ function ClickableField({ initialText, initialColor, size }) {
         width: size || '200px',
         height: '100px',
         backgroundColor: clicked ? 'lightblue' : initialColor || 'lightgray',
-        top: 20,
-        right: 20,
+       
         position: 'absolute',
         textAlign: 'center',
         lineHeight: '100px',
@@ -30,4 +29,4 @@ function ClickableField({ initialText, initialColor, size }) {
   );
 }
 
-export default ClickableField;
+export default DialogBox;

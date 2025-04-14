@@ -95,11 +95,15 @@
   background-repeat: no-repeat;
 }
 
+
+
 .top-left {
   top: 10px;
   left: 10px;
   background-image: url('images/prototype_topmons_card_design_nb.png');
 }
+
+
 
 .bottom-right {
   bottom: 10px;
