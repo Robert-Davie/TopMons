@@ -11,10 +11,9 @@ function DialogBox({ initialText, initialColor, size }) {
     <div
       onClick={handleClick}
       style={{
-        width: size || '200px',
+        width: size || '42%',
         height: '100px',
         backgroundColor: clicked ? 'lightblue' : initialColor || 'lightgray',
-       
         position: 'absolute',
         textAlign: 'center',
         lineHeight: '100px',

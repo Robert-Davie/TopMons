@@ -95,15 +95,11 @@
   background-repeat: no-repeat;
 }
 
-
-
 .top-left {
   top: 10px;
   left: 10px;
   background-image: url('images/prototype_topmons_card_design_nb.png');
 }
-
-
 
 .bottom-right {
   bottom: 10px;
@@ -149,6 +145,41 @@
   font-weight: bold;
   transition: transform 0.2s;
   transform-origin: center;
+}
+
+.opponent-card, .player-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Optional: Adds vertical spacing */
+  align-items: stretch; /* Make children stretch to full width */
+  padding: 10px;
+  height: 100%;
+  box-sizing: border-box;
+  position: relative;
+}
+
+.header-area {
+  flex: 0 0 9%;
+  background-color: #fdd;
+  margin-bottom: 1%;
+}
+
+.image-area {
+  flex: 0 0 39%;
+  background-color: #dfd;
+  margin-bottom: 1%;
+}
+
+.stats-area {
+  flex: 0 0 49%;
+  background-color: #ddf;
+  margin-bottom: 1%;
+  justify-content: space-between; /* Optional: Adds vertical spacing */
+  align-items: stretch; /* Make children stretch to full width */
+  box-sizing: border-box;
+  position: relative;
+  display: flex;
+  flex-direction: column;
 }
 
 .middle {

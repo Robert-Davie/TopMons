@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-function PlayerStatAttack({ initialText, initialColor, size }) {
+function PlayerStatAttack({ initialText, initialTextColor, initialBGColor, size, selected, onClick }) {
   const [clicked, setClicked] = useState(false);
 
   const handleClick = () => {
@@ -11,20 +11,23 @@ function PlayerStatAttack({ initialText, initialColor, size }) {
     <div
       onClick={handleClick}
       style={{
-        width: size || '200px',
-        height: '60px',
-        backgroundColor: clicked ? 'lightblue' : initialColor || 'lightgray',
+        width: size || '80%',
+        height: '20%',
+        backgroundColor: clicked ? '#fdd' : initialBGColor || 'transparent',
         top: 10, 
         position: 'absolute',
-        textAlign: 'center',
-        lineHeight: '100px',
-        fontSize: '20px',
-        color: 'black',
+        display: 'flex',
+        justifyContent: 'left',
+        alignItems: 'center',
+        lineHeight: '100%',
+        fontSize: '18px',
+        paddingLeft: '1%',
+        color: clicked ? 'red' : initialTextColor || 'black',
         //THIS IS SO COOL
         cursor: 'pointer',
       }}
     >
-      {clicked ? 'You clicked me!' : initialText || 'Click me'}
+      {clicked ? 'ATTACK' : initialText || 'Attack'}
     </div>
   );
 }

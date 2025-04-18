@@ -1,4 +1,5 @@
 import './App.css';
+import React, { useState } from 'react';
 import ClickableField from './components/ClickableField';
 import DialogBox from './components/DialogBox';
 import CommitButton from './components/CommitButton';
@@ -6,8 +7,13 @@ import PlayerStatDefence from './components/PlayerStatDefence';
 import PlayerStatAttack from './components/PlayerStatAttack';
 import PlayerStatHP from './components/PlayerStatHP';
 import PlayerStatSpeed from './components/PlayerStatSpeed';
+import PlayerStatsGroup from './components/PlayerStatsGroup';
 
 function App() {
+  const [selectedPlayerStat, setSelectedPlayerStat] = useState(null);
+  const [selectedOpponentStat, setSelectedOpponentStat] = useState(null);
+
+
   return (
     <div className="container">
     <div className="sidebar">
@@ -23,23 +29,32 @@ function App() {
     </div>
     <div className="main-content">
       <div className="playmat">
-      
         <div className="deck top-left"></div>
         <ClickableField initialText="SCORE" initialColor="pink" size="150px" />
         <div className="deck bottom-right"></div>
           <div className="play-area">
             <div className="opponent-row">
-              <div className="card opponent-card">Opponent Hand</div>
+              <div className="card opponent-card">
+                <div className="header-area"></div>
+                <div className="image-area"></div>
+                <div className="stats-area">
+                  <PlayerStatsGroup />
+                </div>
+              </div>
             </div>
             <div className="middle-row">
-             <DialogBox initialText="Click me" initialColor="lightgray" size="200px" /> 
+             <DialogBox initialText="Click me" initialColor="lightgray" size="40%" /> 
             </div>
             <div className="player-row">
-              <div className="card player-card">Player Hand
-                <PlayerStatDefence initialText="Defence" initialColor="lightgray" size="200px" />
-                <PlayerStatAttack initialText="Attack" initialColor="lightgray" size="200px" />
-                <PlayerStatHP initialText="HP" initialColor="lightgray" size="200px" />
-                <PlayerStatSpeed initialText="Speed" initialColor="lightgray" size="200px" />
+              <div className="card player-card">
+                <div className="header-area"></div>
+                <div className="image-area"></div>
+                <div className="stats-area">
+                  <PlayerStatAttack initialText="Attack" initialTextColor="black" initialBGColor="transparent" size="100%" />
+                  <PlayerStatDefence initialText="Defence" initialTextColor="black" initialBGColor="transparent" size="100%" />
+                  <PlayerStatHP initialText="HP" initialTextColor="black" initialBGColor="transparent" size="100%" />
+                  <PlayerStatSpeed initialText="Speed" initialTextColor="black" initialBGColor="transparent" size="100%" />
+                </div>
               </div>
             </div>
           </div>
