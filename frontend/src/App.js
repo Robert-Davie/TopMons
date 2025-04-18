@@ -3,15 +3,22 @@ import React, { useState } from 'react';
 import ClickableField from './components/ClickableField';
 import DialogBox from './components/DialogBox';
 import CommitButton from './components/CommitButton';
-import PlayerStatDefence from './components/PlayerStatDefence';
-import PlayerStatAttack from './components/PlayerStatAttack';
-import PlayerStatHP from './components/PlayerStatHP';
-import PlayerStatSpeed from './components/PlayerStatSpeed';
 import PlayerStatsGroup from './components/PlayerStatsGroup';
 
 function App() {
-  const [selectedPlayerStat, setSelectedPlayerStat] = useState(null);
-  const [selectedOpponentStat, setSelectedOpponentStat] = useState(null);
+  const [dialogMessage, setDialogMessage] = useState("Waiting for player...");
+
+  const handleStatSelect = (stat) => {
+    if (!stat) {
+      setDialogMessage("Tumbleweed...");
+    } else {
+      setDialogMessage(`Player is selecting ${stat}...`);
+    }
+  };
+
+  const handleStatConfirm = (stat) => {
+    setDialogMessage(`Player has chosen ${stat}!`);
+  };
 
 
   return (
@@ -25,6 +32,7 @@ function App() {
       <div className="menu bottom-menu">
         <div className="menu-item">Options</div>
         <div className="menu-item">About</div>
+        <div className="menu-item">Creators</div>
       </div>
     </div>
     <div className="main-content">
@@ -37,30 +45,29 @@ function App() {
               <div className="card opponent-card">
                 <div className="header-area"></div>
                 <div className="image-area"></div>
-                <div className="stats-area">
-                  <PlayerStatsGroup />
-                </div>
+                <PlayerStatsGroup
+                  onStatSelect={handleStatSelect}
+                  onStatConfirm={handleStatConfirm}
+                />
               </div>
             </div>
             <div className="middle-row">
-             <DialogBox initialText="Click me" initialColor="lightgray" size="40%" /> 
+             <DialogBox message={dialogMessage} initialColor="lightgray" size="40%" /> 
             </div>
             <div className="player-row">
               <div className="card player-card">
                 <div className="header-area"></div>
                 <div className="image-area"></div>
-                <div className="stats-area">
-                  <PlayerStatAttack initialText="Attack" initialTextColor="black" initialBGColor="transparent" size="100%" />
-                  <PlayerStatDefence initialText="Defence" initialTextColor="black" initialBGColor="transparent" size="100%" />
-                  <PlayerStatHP initialText="HP" initialTextColor="black" initialBGColor="transparent" size="100%" />
-                  <PlayerStatSpeed initialText="Speed" initialTextColor="black" initialBGColor="transparent" size="100%" />
-                </div>
+                <PlayerStatsGroup
+                  onStatSelect={handleStatSelect}
+                  onStatConfirm={handleStatConfirm}
+                />
               </div>
             </div>
           </div>
+        </div>
       </div>
     </div>
-  </div>
   );
 }
 

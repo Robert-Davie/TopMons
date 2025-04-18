@@ -1,34 +1,24 @@
-import React, { useState } from 'react';
+import React from 'react';
 
-function PlayerStatHP({ initialText, initialTextColor, initialBGColor, size, selected, onClick }) {
-  const [clicked, setClicked] = useState(false);
-
-  const handleClick = () => {
-    setClicked(!clicked);
-  };
-
+function PlayerStatHP({ selected, onClick, value = 50 }) {
   return (
     <div
-      onClick={handleClick}
+      onClick={onClick}
       style={{
-        width: size || '80%',
+        width: '100%',
         height: '20%',
-        backgroundColor: clicked ? '#fdd' : initialBGColor || 'transparent',
-        top: 90,
-        position: 'absolute',
+        backgroundColor: selected ? '#fdd' : 'transparent',
         display: 'flex',
-        justifyContent: 'left',
+        justifyContent: 'space-between',
         alignItems: 'center',
-        textAlign: 'left',
-        lineHeight: '25px',
-        fontSize: '18px',
-        paddingLeft: '1%',
-        color: clicked ? 'red' : initialTextColor || 'black',
-        //THIS IS SO COOL
+        fontSize: selected ? '20px' : '18px',
+        padding: '0 5%',
+        color: selected ? 'red' : 'black',
         cursor: 'pointer',
       }}
     >
-      {clicked ? 'HP' : initialText || 'HP'}
+      <span>{selected ? "HP" : "HP"}</span>
+      <span>{value}</span>
     </div>
   );
 }

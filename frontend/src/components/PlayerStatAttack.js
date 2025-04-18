@@ -1,33 +1,24 @@
-import React, { useState } from 'react';
+import React from 'react';
 
-function PlayerStatAttack({ initialText, initialTextColor, initialBGColor, size, selected, onClick }) {
-  const [clicked, setClicked] = useState(false);
-
-  const handleClick = () => {
-    setClicked(!clicked);
-  };
-
+function PlayerStatAttack({ selected, onClick, value = 42 }) {
   return (
     <div
-      onClick={handleClick}
+      onClick={onClick}
       style={{
-        width: size || '80%',
+        width: '100%',
         height: '20%',
-        backgroundColor: clicked ? '#fdd' : initialBGColor || 'transparent',
-        top: 10, 
-        position: 'absolute',
+        backgroundColor: selected ? '#fdd' : 'transparent',
         display: 'flex',
-        justifyContent: 'left',
+        justifyContent: 'space-between',
         alignItems: 'center',
-        lineHeight: '100%',
-        fontSize: '18px',
-        paddingLeft: '1%',
-        color: clicked ? 'red' : initialTextColor || 'black',
-        //THIS IS SO COOL
+        fontSize: selected ? '20px' : '18px',
+        padding: '0 5%',
+        color: selected ? 'red' : 'black',
         cursor: 'pointer',
       }}
     >
-      {clicked ? 'ATTACK' : initialText || 'Attack'}
+      <span>{selected ? "ATTACK" : "Attack"}</span>
+      <span>{value}</span>
     </div>
   );
 }

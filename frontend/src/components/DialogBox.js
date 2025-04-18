@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-function DialogBox({ initialText, initialColor, size }) {
+function DialogBox({ message, initialColor, size }) {
   const [clicked, setClicked] = useState(false);
 
   const handleClick = () => {
@@ -23,7 +23,7 @@ function DialogBox({ initialText, initialColor, size }) {
         cursor: 'pointer',
       }}
     >
-      {clicked ? 'You clicked me!' : initialText || 'Click me'}
+      {message || "Nothing's happening just yet..."}
     </div>
   );
 }
