@@ -35,11 +35,17 @@ function App() {
              <DialogBox initialText="Click me" initialColor="lightgray" size="200px" /> 
             </div>
             <div className="player-row">
-              <div className="card player-card">Player Hand
-                <PlayerStatDefence initialText="Defence" initialColor="lightgray" size="200px" />
-                <PlayerStatAttack initialText="Attack" initialColor="lightgray" size="200px" />
-                <PlayerStatHP initialText="HP" initialColor="lightgray" size="200px" />
-                <PlayerStatSpeed initialText="Speed" initialColor="lightgray" size="200px" />
+              <div className="card player-card">
+                <div className="player-card-header"></div>
+                <div className="player-card-image"></div>
+                <div className="player-card-stats">
+
+                  <PlayerStatAttack initalText="Attack" initialColor="transparent" size="100%" initalTextColor="black" />
+                  <PlayerStatDefence initalText="Defence" initialColor="transparent" size="100%" initalTextColor="black" />
+                  <PlayerStatHP initalText="HP" initialColor="transparent" size="100%" initalTextColor="black"/>
+                  <PlayerStatSpeed initalText="Speed" initialColor="transparent" size="100%" initalTextColor="black"/>
+
+                </div>
               </div>
             </div>
           </div>
