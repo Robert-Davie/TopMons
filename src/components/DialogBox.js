@@ -1,5 +1,15 @@
 import React, { useState } from 'react';
 
+/**
+ * 
+ * Creates a clickable field for the dialog box.
+ * Once clicked it changes the background colour and the text of the button. 
+*@param {string} initialText
+*@param {string} initialColor
+*@param {number} size
+*@returns {JSX.Element} Clickable field
+ */
+
 function DialogBox({ initialText, initialColor, size }) {
   const [clicked, setClicked] = useState(false);
 

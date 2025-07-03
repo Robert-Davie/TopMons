@@ -1,5 +1,17 @@
 import React, { useState } from 'react';
 
+/**
+ * Creates a clickable field for the Player's Stats for attack.
+ * Once clicked it changes the background colour and the colour of the button's text.
+ * 
+ *
+*@param {string} initialText
+*@param {string} initialColor
+*@param {number} size
+*@param {string} initialTextColor
+*@returns {JSX.Element} Clickable field
+
+ */
 function PlayerStatAttack({ initialText, initialColor, size, initialTextColor }) {
   const [clicked, setClicked] = useState(false);
 

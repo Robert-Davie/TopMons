@@ -8,6 +8,12 @@ import PlayerStatHP from './components/PlayerStatHP';
 import PlayerStatSpeed from './components/PlayerStatSpeed';
 import SelectedComputerCard from './components/SelectComputerCard';
 
+
+
+/**
+ *Generates the HTML for the website
+ */
+
 function App() {
   return (
     <div className="container">
@@ -59,5 +65,6 @@ function App() {
 
   );
 }
+
 
 export default App;

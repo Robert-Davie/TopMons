@@ -1,5 +1,16 @@
 import React, { useState } from 'react';
+/**
+ * Creates a clickable field for the Bot's Stats for attack.
+ * Once clicked it changes the background colour and the colour of the button's text.
+ * 
+ *
+*@param {string} initialText
+*@param {string} initialColor
+*@param {number} size
+*@param {string} initialTextColor
+*@returns {JSX.Element} Clickable field
 
+ */
 function SelectedComputerCard({ initialText, initialColor, size, initialTextColor }) {
   const [clicked, setClicked] = useState(false);
 
@@ -36,7 +47,31 @@ function SelectedComputerCard({ initialText, initialColor, size, initialTextColo
 export default SelectedComputerCard;
 
 
-function SelectComputerCard(){  
+/**
+ *Creates 5 cards and picks a random card.
+ *Focuses only on the attack stat.
+ *
+ *NOT COMPLETE!!!!!!!!
+ @returns {String} - Details of the randomly selected card.
+ */
+
+function SelectComputerCard(){ 
+  
+      /**
+       * 
+       * Creates a dataclass to store the various card stats.
+      *@param {string} name
+      *@param {number} id
+      *@param {number} size
+      *@param {number} attack
+      *@param {number} defense
+      *@param {number} hp
+      *@param {number} speed
+
+       * 
+       * 
+       */
+
    function Card(name, id, attack, defense, hp, speed) {
         this.name = name;
         this.id = id;
@@ -45,6 +80,8 @@ function SelectComputerCard(){
         this.hp = hp;
         this.speed = speed;
     };
+
+
     let card1 = new Card("Meowth", 2, 45, 35, 40, 90);
     let card2 = new Card("Squirtle", 3, 48, 65, 44, 43);
     let card3 = new Card("Pikachu", 4, 55, 30, 35, 90);
