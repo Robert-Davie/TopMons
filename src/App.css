@@ -1,0 +1,365 @@
+.App {
+  text-align: center;
+}
+
+/* Basic Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Container Setup */
+.container {
+  display: flex;
+  height: 100vh;
+}
+
+/* Sidebar Styling */
+.sidebar {
+  width: 20%;
+  background-color: #333;
+  color: white;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* This spreads top and bottom menus */
+  height: 100vh; /* Ensure full height for proper spacing */
+}
+
+
+.menu-item {
+  padding: 15px;
+  text-align: center;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.menutitle {
+  background-image: url('images/TopMons Text Generated.png');
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 50%;
+}
+
+.menutitle:hover {
+  transform: scale(1.1);
+}
+
+.menu-item:hover {
+  background-color: #444;
+}
+
+.menu-item:first-child {
+  margin-top: 20px;
+}
+
+.menu-item:last-child {
+  margin-bottom: 20px;
+}
+
+/* Main Content Area */
+.main-content {
+  width: 80%;
+  background-color:darkcyan;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Playmat Setup */
+.playmat {
+  width: 90%;
+  height: 95%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  background-color: darkgrey;
+}
+
+.deck {
+  width: 12%; 
+  height: 28%;
+  border-radius: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
+  font-weight: bold;
+  position: absolute;
+  z-index: 1;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+
+
+.top-left {
+  top: 10px;
+  left: 10px;
+  background-image: url('images/prototype_topmons_card_design_nb.png');
+}
+
+
+
+.bottom-right {
+  bottom: 10px;
+  right: 10px;
+  background-image: url('images/prototype_topmons_kai_card_design_nb.png');
+}
+
+/* Play Area - Center */
+.play-area {
+  width: 50%; /* or use a % if you want it responsive */
+  height: 95%;
+  background-color: #bbb;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 10px;
+  box-sizing: border-box;
+  border-radius: 10px;
+}
+
+.opponent-row {
+  display: flex;
+  height: 40%;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+}
+.middle-row {
+  display: flex;
+  height: 20%;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+}
+.player-row {
+  display: flex;
+  height: 40%;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+}
+
+.middle-row {
+  gap: 30%;
+  background-color: #aaa;
+}
+
+.card {
+  width: 32%;
+  min-width: 150px;
+  height: 99%;
+  background-color: #ddd;
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  transition: transform 0.2s;
+  transform-origin: center;
+}
+
+.player-card{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: stretch;
+  padding: 10px;
+  height: 100%;
+  position: relative;
+  box-sizing: border-box;
+}
+
+.player-card-header{
+  background-color: rgb(248, 248, 248);
+  flex: 0,0,10%;
+  margin: 1%;
+  height: 10%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.pokemonName{
+  background-color: rgb(255, 254, 254);
+  position: relative;
+  text-align: left;
+  align-items: flex-end;
+  display: flex;
+  width:80%;
+  height:100%;
+  z-index: 5;
+}
+
+.pokemonTypeIcon{
+  background-color: rgb(255, 255, 255);
+  background-image: url('images/Icons/FireIcon.png');
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  width:20%;
+  height:100%;
+  z-index: 5;
+}
+
+.player-card-image{
+  background-color: rgb(255, 255, 255);
+  background-image: url('images/PokemonImages/CharamanderPokemonHome.png');
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  flex: 0,0,40%;
+  margin: 1%;
+  height: 40%;
+}
+
+.player-card-stats{
+  background-color: #ddf;
+  flex: 0,0,50%;
+  margin: 1%;
+  height: 50%;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: stretch;
+  position: relative;
+  box-sizing: border-box;
+}
+
+.opponent-card{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: stretch;
+  padding: 10px;
+  height: 100%;
+  position: relative;
+  box-sizing: border-box;
+}
+
+.opponent-card-header{
+  background-color: rgb(248, 248, 248);
+  flex: 0,0,10%;
+  margin: 1%;
+  height: 10%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  
+}
+
+.opponentPokemonName{
+  background-color: rgb(255, 254, 254);
+  position: relative;
+  text-align: left;
+  align-items: flex-end;
+  display: flex;
+  width:80%;
+  height:100%;
+  z-index: 5;
+}
+
+/*Need to change icon to water type.*/
+.opponentPokemonTypeIcon{
+  background-color: rgb(255, 255, 255);
+  background-image: url('images/Icons/Water.png');
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  width:20%;
+  height:100%;
+  z-index: 5;
+}
+
+/*Need to change pokemon image to Squirtle.*/
+.opponent-card-image{
+  background-color: rgb(255, 255, 255);
+  background-image: url('images/PokemonImages/Squirtle.png');
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  flex: 0,0,40%;
+  margin: 1%;
+  height: 40%;
+}
+
+.opponent-card-stats{
+  background-color: #ddf;
+  flex: 0,0,50%;
+  margin: 1%;
+  height: 50%;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: stretch;
+  position: relative;
+  box-sizing: border-box;
+}
+
+.middle {
+  border-style: dashed;
+  height: 95%;
+  width: 30%;
+}
+
+.card:hover {
+  transform: scale(1.3);
+  background-color: aliceblue;
+  z-index: 2;
+  cursor: pointer;
+}
+
+.commit-button {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color:grey;
+  border:#333;
+  border-style:solid;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.commit-button:hover {
+  background-color:antiquewhite;
+}
+
+.commit-button:focus {
+  outline: none;
+  box-shadow: 0 0 5px 2px rgba(0, 0, 255, 0.3);
+}
+
+/* Responsive Styling */
+@media screen and (max-width: 768px) {
+  .container {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    width: 100%;
+    height: auto;
+    padding: 10px;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
+  .main-content {
+    width: 100%;
+    height: 100%;
+  }
+
+  .deck {
+    width: 80px;
+    height: 120px;
+  }
+
+}
+
