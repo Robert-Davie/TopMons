@@ -7,6 +7,10 @@ import PlayerStatAttack from './components/PlayerStatAttack';
 import PlayerStatHP from './components/PlayerStatHP';
 import PlayerStatSpeed from './components/PlayerStatSpeed';
 import SelectedComputerCard from './components/SelectComputerCard';
+import OpponentStatAttack from './components/OpponentStatAttack';
+import OpponentStatDefence from './components/OpponentStatDefence';
+import OpponentStatHP from './components/OpponentStatHP';
+import OpponentStatSpeed from './components/OpponentStatSpeed';
 
 
 
@@ -37,7 +41,18 @@ function App() {
           <div className="play-area">
             <div className="opponent-row">
               <div className="card opponent-card">
-              <SelectedComputerCard initalText="" initialColor="transparent" size="100%" initalTextColor="black" />
+                <div className="opponent-card-header">
+                  <div className="opponentPokemonName">Squirtle</div>
+                  <div className="opponentPokemonTypeIcon"></div>
+                </div>
+                <div className="opponent-card-image"></div>
+                <div className="opponent-card-stats">
+                  <OpponentStatAttack initalText="Attack" initialColor="transparent" size="100%" initalTextColor="black" />
+                  <OpponentStatDefence initalText="Defence" initialColor="transparent" size="100%" initalTextColor="black" />
+                  <OpponentStatHP initalText="HP" initialColor="transparent" size="100%" initalTextColor="black" />
+                  <OpponentStatSpeed initalText="Speed" initialColor="transparent" size="100%" initalTextColor="black" />
+                </div>
+              
               </div>
             </div>
             <div className="middle-row">
