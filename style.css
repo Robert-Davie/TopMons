@@ -1,0 +1,28 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+#myContainer {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    right: 20px;
+    bottom: 20px;
+    background-color: gray;
+    /* Add any additional styling you need below */
+    overflow: auto; /* ensures content can be scrolled if there's more to show */
+}
+
+#myMat {
+    position: absolute;
+    top: 50px;
+    left: 50px;
+    right: 50px;
+    bottom: 50px;
+    color: white;
+    background-color: black;
+    /* Add any additional styling you need below */
+    overflow: auto; /* ensures content can be scrolled if there's more to show */
+}
