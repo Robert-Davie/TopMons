@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import PlayerStatAttack from './PlayerStatAttack';
 
 /**
  * 
@@ -10,21 +11,23 @@ import React, { useState } from 'react';
 *@returns {JSX.Element} Clickable field
  */
 
-function DialogBox({ initialText, initialColor, size }) {
-  const [clicked, setClicked] = useState(false);
+function DialogBox({}) {
+  // const [clicked, setClicked] = useState(false);
 
-  const handleClick = () => {
-    setClicked(!clicked);
-  };
+  // const handleClick = () => {
+  //   setClicked(!clicked);
+  // };
+
+  const boxText = 'Player Turn';
 
   return (
     <div
-      onClick={handleClick}
+      // onClick={handleClick}
       style={{
-        width: size || '200px',
+        width: '200px',
         height: '100px',
-        backgroundColor: clicked ? 'lightblue' : initialColor || 'lightgray',
-       
+        // backgroundColor: clicked ? 'lightblue' : initialColor || 'lightgray',
+        backgroundColor: 'purple',
         position: 'absolute',
         textAlign: 'center',
         lineHeight: '100px',
@@ -34,7 +37,8 @@ function DialogBox({ initialText, initialColor, size }) {
         cursor: 'pointer',
       }}
     >
-      {clicked ? 'You clicked me!' : initialText || 'Click me'}
+      {boxText}
+      {/* {clicked ? 'Opponent Turn' : initialText || 'Something went wrong'} */}
     </div>
   );
 }

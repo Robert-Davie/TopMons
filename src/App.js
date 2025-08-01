@@ -56,7 +56,7 @@ function App() {
               </div>
             </div>
             <div className="middle-row">
-             <DialogBox initialText="Click me" initialColor="lightgray" size="200px" /> 
+             <DialogBox/> 
             </div>
             <div className="player-row">
               <div className="card player-card">
